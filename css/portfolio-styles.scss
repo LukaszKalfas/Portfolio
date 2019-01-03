@@ -1,0 +1,444 @@
+@import "_variables";
+@import "_mixins";
+
+// SHARED STYLES
+.container-menu {
+      .menu {
+            .bar {
+                  background: $black;
+            }
+            h5 {
+                  color: $black;
+            }
+      }
+}
+nav {
+      ul {
+            li {
+                  a {
+                        color: $black;
+                  }
+            }
+      }
+}
+header {
+      margin-top: 10%;
+      margin-bottom: 5%;
+      text-align: center;
+      display: block;
+      h1 {
+            padding: 40px 100px 40px 0;
+            margin: 0;
+            font-family: $font-EB;
+            font-size: 3.8em;
+            position: relative;
+            display: inline-block;
+             &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  height: 100%;
+                  width: 70%;
+                  border: 20px solid $yellow;
+                  opacity: .78;
+                  border-radius: 3px;
+                  @include box-sizing(border-box);
+                  z-index: -1;
+            }
+
+      }
+}
+h2 {
+      margin-top: 10%;
+      margin-bottom: 5%;
+      color: $yellow;
+      font-size: 2em;
+      text-align: center
+}
+h3 {
+      font-size: 1.2em;
+      margin: 5% 0;
+      text-align: center;
+}
+p {
+      text-align: center; 
+}
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100000;
+background: #ededed;
+a {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      height: 20px;
+      cursor: pointer;
+      }
+      .modal-content {
+      height: 100%;
+      width: 100%;
+            ::-webkit-scrollbar  {
+                  width: 10px;
+            }
+           
+            #modal-inner {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            overflow: scroll;
+            overflow-x: hidden;
+                  img {
+                        width: 60%;
+                        display: block;
+                        margin: 80px auto;
+                  }
+            }
+      }
+      a.modal-close {
+      height: 23px;
+      display: inline-block;
+      width: 30px;
+            &:hover .bar {
+                  opacity: 1;
+            }
+            .bar {
+            position: absolute;
+            background: $black;
+            border-radius: 2px;
+            width: 30px;
+            height: 3px;
+            top:10px;
+            right: 0;
+            opacity: .6;
+            @include transition(opacity .2s ease-in-out);
+
+                  &:first-child {
+                          -webkit-transform: rotate(135deg);
+                        -ms-transform: rotate(135deg);
+                        -moz-transform: rotate(135deg);
+                        -o-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                  }
+                  &:last-child {
+                        -webkit-transform: rotate(-135deg);
+                        -ms-transform: rotate(-135deg);
+                        -moz-transform: rotate(-135deg);
+                        -o-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
+                  }
+            }
+      }
+      
+}
+
+
+main.projects {
+      padding: 0 15%; 
+      @include box-sizing(border-box);
+      iframe, .header-img {
+      width: 100%;
+      height: 45vh;
+      border: none;
+      overflow: hidden;
+      }
+      .header-img {
+            background-size: cover;
+            background-position: center;
+             a {
+                  display: block;
+                  position: relative;
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background: rgba(0, 0, 0, 0.40);
+                  text-decoration: none;
+                  font-style: italic;
+                  color: #ffffff;
+                  font-size: 9px;
+                  top: 50%;
+                  left: 50%;
+                  @include transform(translate(-50%, -50%));
+                   @include flexbox-display-flex;
+                  @include flex-direction(column);
+                  @include align-item-flex(center);
+                  @include  justify-content-flex(center);
+                  text-align: center;
+                  cursor: pointer;
+                  @include transition(opacity .2s ease-in-out);
+                  &:hover  {
+                        background: rgba(0, 0, 0, 0.60);
+                  }
+                        img {
+                              display: inline-block;
+                              height: 18px;
+                              width: 18px;
+                               margin: 0 0 3px 0;
+                         }
+                  }
+            }
+      .typography {
+            p {
+                  margin: 15px 0;
+                  &:nth-child(2) {
+                        margin-top: 0;
+                  }
+                  &:last-child {
+                        margin-bottom: 0;
+                  }
+
+            }
+            .tittle {
+                  font-size: 40px;
+                  line-height: 50px;
+            }
+            .subtittle {
+                  font-size: 23px;
+            }
+            .basic-text {
+                  font-size: 14px;
+            }
+            .quote {
+                  font-style: italic;
+                  font-size: 13px;
+            }
+      }
+      .icons {
+            img {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            }
+      }
+      .colors {
+            div {
+                  width: 100%;
+                  height: 100%;
+                  p {
+                        line-height: 80px;
+                        text-align: center;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                  }
+            }
+      }
+      .other-projects-btn {
+            margin: 10% 0;
+            text-align: center;
+            .btn {
+                  padding: 10px 120px;
+                  i {
+                        font-size: 16px;
+                        margin-left: 10px;
+                  }
+            }
+      }
+}    
+      
+footer {
+      height: 150px;
+      p {
+            line-height: 150px;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+      }
+}
+      // EBOOK W POSZUKIWANIU SAMODYSCYPLINY STYLES
+.samodysc {
+      .tittle {
+            font-family: 'Playfair Display', serif;
+      }
+      .subtittle {
+            font-family: 'Asap', sans-serif;
+            font-size: 23px;
+      }
+      .basic-text {
+            font-family: 'Comfortaa', cursive;
+      }
+      .quote {
+            font-family: 'Asap', sans-serif;
+            font-style: italic;
+            font-size: 13px;
+      }     
+}
+.colors.samodysc {
+      div:nth-child(2) {
+            background: #ededed;
+      }
+      div:nth-child(3) {
+            background:#7f8e93;
+            color: inherit;
+      }
+      div:last-child {
+            background: #cc9c84;
+      }
+}
+
+
+// LAYOUT BLUE STYLES
+.layout-blue {
+      .tittle {
+            font-family: 'Asap', sans-serif;
+      }
+      .subtittle {
+            font-family: 'Asap', sans-serif;
+            font-weight: 900;
+      }
+      .basic-text {
+            font-family: 'Arsenal', sans-serif;
+      }
+      .quote {
+            font-family: 'Arsenal', sans-serif;
+      }
+}
+.colors.layout-blue {
+      div:nth-child(2) {
+            background: #ffffff;
+      }
+      div:nth-child(3) {
+            background: #000000;
+            color: $white;
+
+      }
+      div:last-child {
+            background: #2EC4B6;
+
+      }
+}
+
+// LAYOUT GRAY STYLES
+.layout-gray {
+      .tittle {
+            font-family: 'Montserrat', sans-serif;
+      }
+      .subtittle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+      }
+      .basic-text {
+            font-family: 'Raleway', sans-serif;
+      }
+}
+.colors.layout-gray {
+      div:nth-child(2) {
+            background: #ffffff;
+      }
+      div:nth-child(3) {
+            background: #DCDCDC;
+
+      }
+      div:nth-child(4) {
+            background: #46494C;
+            color: $white;
+      }
+      div:last-child {
+            background: #1985A1;
+             color: $white;
+      }
+}
+
+// MATRYCA EISENHOWERA STYLES 
+.header-img.matryca {
+      background-image: url(../img/projects/matryca-header-img.jpg);
+}
+.matryca {
+      .tittle {
+            font-family: "Asap", sans-serif;
+            font-weight: 900;
+      }
+      .subtittle {
+            font-family: "Asap", sans-serif;
+            font-weight: 700;
+      }
+      .basic-text {
+            font-family: 'Montserrat', sans-serif;
+      }
+}
+.colors.matryca {
+      div:nth-child(2) {
+            background: #FFFFFF;
+      }
+      div:nth-child(3) {
+            background: #868686;
+            color: $white;
+      }
+      div:last-child {
+            background: #FFBE08;
+      }
+}
+
+// POMODORO STYLES
+main .header-img.pomodoro {
+      background-image: url(../img/projects/pomodoro-header-img.jpg);
+      a {
+            background: rgba(255, 255, 255, 0.20);
+            &:hover {
+                  background: rgba(255, 255, 255, 0.10);
+            }
+      }
+}
+.pomodoro {
+      .tittle {
+            font-family: "Asap", sans-serif;
+            font-weight: 700;
+      }
+      .subtittle {
+            font-family: "Asap", sans-serif;
+            font-weight: 600;
+      }
+      .basic-text {
+            font-family: 'Comfortaa', cursive;
+      }
+}
+.colors.pomodoro {
+      div:nth-child(2) {
+            background: #FFFFFF;
+      }
+      div:nth-child(3) {
+            background: #000000;
+            color: $white;
+      }
+      div:nth-child(4) {
+            background: #A5846B;
+      }
+      div:last-child {
+            background: #55082F;
+                        color: $white;
+      }
+}
+
+// PHOTOGRAPHY STYLES
+
+main.projects .header-img.photography {
+      background-image:  url(../img/projects/photography-header-img.jpg);
+}
+.photography {
+      .tittle {
+            font-family: 'Bree Serif', serif;;
+            font-weight: 700;
+      }
+      .subtittle {
+            font-family: 'Bree Serif', serif;
+      }
+      .basic-text {
+            font-family: 'Roboto', sans-serif;
+      }
+}
+.colors.photography {
+      div:nth-child(2) {
+            background: #FFFFFF;
+      }
+      div:nth-child(3) {
+            background: #000000;
+            color: $white;
+      }
+      div:nth-child(4) {
+            background: #FEB407;
+      }
+}

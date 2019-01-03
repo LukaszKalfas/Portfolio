@@ -1,0 +1,175 @@
+@media screen and (max-width: 1200px) {
+      
+      /* SHARED STYLES */
+      header {
+            margin-top: 14%;
+      }
+     header h1 {
+            font-size: 3.4em;
+            padding: 40px 90px 40px 0;
+     }
+      header h1::after{
+            border: 17px solid #f5cb5c;
+      }
+      h2 {
+            font-size: 2em;
+            margin-top: 18%;
+            margin-bottom: 7%;
+      }
+      h3 {
+            margin-top: 18%;
+            margin-bottom: 7%;
+      }
+      main.projects .typography .tittle {
+            font-size: 1.7em;
+            line-height: 40px;
+      }
+      main.projects .typography .subtittle {
+            font-size: 1.3em;
+      }
+      main.projects .typography .basic-text {
+            font-size: 1.05em;
+      }
+      main.projects .typography .quote {
+            font-size: 0.95em;
+      }
+      main.projects .colors div p {
+            height: 70px;
+            line-height: 70px;
+      }
+      .modal .modal-content #modal-inner img {
+            width: 75%;
+            margin: 50px auto;
+      } 
+}
+
+
+@media screen and (max-width: 992px) {
+      main.projects,  {
+            padding: 0 10%;
+      }
+      span.matryca,  span.samodysc {
+            display: block;
+      }
+
+      header {
+            margin-top: 15%;
+            margin-bottom: 8%;
+      }
+     header h1 {
+            font-size: 2.5em;
+            padding: 35px 75px 35px 0;
+            text-align: left;
+     }
+       header h1::after {
+            border: 14px solid #f5cb5c;
+      }
+      h2 {
+            font-size: 1.8em;
+            margin-top: 20%;
+            margin-bottom: 8%;
+      }
+      h3 {
+            margin-top: 20%;
+            margin-bottom: 8%;
+      }
+        main.projects .typography .tittle {
+            font-size: 1.7em;
+            line-height: 40px;
+      }
+      main.projects .typography .subtittle {
+            font-size: 1.3em;
+      }
+      main.projects .typography .basic-text {
+            font-size: 1.05em;
+      }
+      main.projects .typography .quote {
+            font-size: 0.95em;
+      }
+      main.projects .colors div p {
+            height: 70px;
+            line-height: 70px;
+      }
+      main.projects .other-projects-btn .btn {
+            padding: 8px 50px;
+            font-size: 1em;
+      }
+      .modal .modal-content #modal-inner img {
+            width: 80%;
+            margin: 60px auto;
+      } 
+}     
+      @media screen and (max-width: 599px) {
+      /* SHARED STYLES */
+      main.projects {
+            padding: 0 5%;
+      }
+      header {
+            margin-top: 25%;
+            margin-bottom: 8%;
+      }
+      header h1 {
+            font-size: 2em;
+            padding:20px 40px 20px 0;
+            text-align: left;
+            line-height: 40px;
+     }
+     header h1 span {
+           display: block;
+           text-align: left;
+     }
+      header h1::after {
+            border: 10px solid #f5cb5c;
+            width: 75%;
+      }
+      h2 {
+            font-size: 1.4em;
+            margin-top: 25%;
+            margin-bottom: 12%;
+      }
+
+      main.projects .typography .tittle {
+            font-size: 1.4em;
+            line-height: 30px;
+      }
+      main.projects .typography .subtittle {
+            font-size: 1.1em;
+      }
+      main.projects .typography .basic-text {
+            font-size: 0.9em;
+      }
+      main.projects .typography .quote {
+            font-size: 0.8em;
+      }
+      main.projects .colors div p {
+            height: 50px;
+            line-height: 50px;
+      }
+      main.projects .other-projects-btn .btn {
+            padding: 8px 20px;
+            font-size: 0.8em;
+      } 
+      .modal .modal-content #modal-inner img {
+            width: 85%;
+            margin: 40px auto;
+      } 
+      .modal a.modal-close {
+            top: 10px;
+            right: 10px;
+            width: 20px;
+      } 
+      .modal a.modal-close .bar {
+            height: 2px;
+            width: 20px;
+      }
+}
+
+@media screen and (max-width: 420px) {
+      header {
+            margin-top: 30%;
+            margin-bottom: 15%;
+      }
+      header h1 {
+            font-size: 1.7em;
+      }
+}

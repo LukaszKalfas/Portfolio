@@ -1,0 +1,94 @@
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin  transform($property) {
+      -webkit-transform: $property;
+      -ms-transform: $property;
+      -moz-transform: $property;
+      -o-transform: $property;
+      transform: $property;
+}
+
+@mixin box-sizing($property) {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+
+@mixin background-size-cover {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+
+@mixin button {
+      cursor: pointer;
+      height: 42px;
+      letter-spacing: 2px;
+      width: 50%;
+      margin-top: 30px; 
+      background: $green;
+      border-radius: 5px;
+      color: $white;
+      font-family: inherit;
+      border: none;
+      -webkit-box-shadow: 0px 10px 5px 1px rgba(168, 168, 168, 0.3);
+      -moz-box-shadow: 0px 10px 5px 1px rgba(168, 168, 168, 0.3);
+      box-shadow: 0px 2px 10px 1px rgba(168, 168, 168, 0.3);
+}
+@mixin transitionCubic($property: all, $duration: 0.5s, $ease: cubic-bezier(0.65,-0.25,0.25, 1.95)) {
+  transition: $property $duration $ease;
+}
+@mixin animation($property) {
+      animatioy: $property;
+      -webkit-animation: $property;
+      -moz-animation:  $property;
+      -o-animation: $property;
+}
+@mixin animation-delay($property) {
+      animation-delay: $property;
+      -webkit-animation-delay: $property;
+      -moz-animation-delay:  $property;
+      -o-animation-delay: $property;
+}
+
+// FLEX-BOX MIXINS
+@mixin flexbox-display-flex {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+}
+
+@mixin justify-content-flex($property) {
+      -moz-justify-content: $property;
+      -webkit-justify-content: $property;
+      justify-content: $property;     
+}
+
+@mixin align-item-flex($property) { 
+      -moz-align-items: $property;
+      -webkit-align-items: $property;
+      align-items: $property;
+}
+
+@mixin flex-direction($property) {
+      -webkit-flex-direction: $property;
+      -moz-flex-direction: $property;
+      -ms-flex-direction: $property;
+      flex-direction: $property;   
+}
+@mixin flex-wrap {
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+}
+

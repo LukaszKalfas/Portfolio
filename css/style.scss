@@ -1,0 +1,583 @@
+@import "_variables";
+@import "_mixins";
+
+body {
+      margin: 0;
+      padding: 0;
+      font-family: $font-raleway;
+      color: $black;
+      background: $white;
+}
+
+// SHARED STYLES 
+.btn {
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+       @include transitionCubic(all, 0.5s, cubic-bezier(0.65,-0.25,0.25,1.95));
+      font-weight: 600;
+      padding: 7px 50px;
+      letter-spacing: 0.8px;
+      background: $yellow;
+      color: $white;
+      text-transform: uppercase;
+      border-radius: 5px;
+      margin-top: 30px;
+      &:hover, &:focus, &:active {
+            letter-spacing: 3px;
+      }
+}
+section header {
+       position: relative;
+       display: inline-block;
+       width: 300px;
+      &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15%;
+            height: 100%;
+            width: 100%;
+            opacity: .5;
+            border: 20px solid $brown;
+            border-radius: 3px;
+           @include box-sizing(border-box);
+            }
+      h2 {
+            font-family: $font-EB;
+            font-size: 4em;
+            line-height: 75px;
+            position: relative;
+            display: inline-block;
+            margin: 5% 0;
+            z-index: 1;
+            span {
+                  color: $yellow;
+                  display: block;
+            }
+      }
+}      
+p {
+      line-height: 25px;
+      letter-spacing: 0.5px;
+      font-size: 0.95em;
+}
+#logo {
+      position: absolute;
+      height: 50px;
+      top: 5%;
+      left: 5%;
+      z-index: 1;  
+}
+// NAVIGATION STYLES START
+.container-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      visibility: hidden;
+      z-index: 2;
+      background: transparent;
+      .menu {
+            position: relative;
+            top: 27px;
+            width: 90px;
+            height: 24px;
+            margin-right: 20px;
+            margin-left: auto;
+            cursor: pointer;
+            &:hover .bar {
+                  opacity: .8;
+            }
+            &:hover h5 {
+                  opacity: .8;
+            }
+            .bar {
+                  position: absolute;
+                  background: $white;
+                  border-radius: 2px;
+                  width: 30px;
+                  height: 3px;
+                  right: 0;
+                  transition: transform 180ms ease-out, opacity 160ms ease-out, top 180ms ease-out, width 120ms ease-out, opacity 300ms ease-out;
+                  -webkit-transition: transform 180ms ease-out, opacity 160ms ease-out, top 180ms ease-out, width 120ms ease-out, opacity 300ms ease-out;
+                  -moz-transition: transform 180ms ease-out, opacity 160ms ease-out, top 180ms ease-out, width 120ms ease-out, opacity 300ms ease-out;
+                  -ms-transition: transform 180ms ease-out, opacity 160ms ease-out, top 180ms ease-out, width 120ms ease-out, opacity 300ms ease-out;
+                  &.open {
+                        background: $black;
+                  }
+                  &:nth-child(1) {
+                        top: 0;
+                  }
+                  &:nth-child(2) {
+                        top: 11px;
+                  }
+                  &:nth-child(3) {
+                        bottom: 0;
+                  }
+                  &.open:nth-child(1) {
+                        top: 11px;
+                        @include transform(rotate(135deg));
+                  }
+                  &.open:nth-child(2) {
+                        opacity: 0;
+                  }
+                  &.open:nth-child(3) {
+                        top: 11px;
+                        @include transform(rotate(-135deg));
+                  }
+            }
+            h5 {
+                  -webkit-user-select: none;
+                  -moz-user-select: none; 
+                  -ms-user-select: none; 
+                  user-select: none;
+                  margin: 0;
+                  position: absolute;
+                  left: 0;
+                  top: 5px;
+                  color: $white;
+                  letter-spacing: 0.8px;
+            }
+      }
+}
+
+nav {
+      top: 5%;
+      right: 5%;
+      position: absolute;
+      height: 50px;
+      z-index: 1;
+      @include transition(height .3s ease-in-out);
+            &.open {
+                  visibility: visible;
+                  top: 0;
+                  height: 100vh;
+                  max-height: 450px;
+            ul {
+                  li {
+                        opacity: 0;
+                        animation: fadeIn .5s ease forwards;
+                        -webkit-animation: fadeIn .5s ease forwards;
+                        -moz-animation: fadeIn .5s ease forwards;
+                        -o-animation: fadeIn .5s ease forwards;
+                        @include animation-delay(300ms);  
+                        &:first-child {
+                              @include animation-delay(350ms);
+                        }
+                        &:nth-child(2) {
+                              @include animation-delay(400ms);
+                        }
+                        &:nth-child(3) {
+                              @include animation-delay(450ms);
+                        }
+                        &:nth-child(4) {
+                              @include animation-delay(500ms);
+                        }
+                        &:nth-child(5) {
+                              @include animation-delay(550ms);
+                        }
+                  }
+            }
+      }
+      ul {
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            position: relative;
+            top: 50%;
+            @include transform(translateY(-50%));
+            li {
+                  display: inline-block;
+                  margin-left: 20px;
+                  list-style-type: none;
+                  a {
+                        position: relative;
+                        font-weight: 500;
+                        font-size: 0.85em;
+                        text-decoration: none;
+                        color: $white;
+                        letter-spacing: 0.8px;
+                        transition: width .3s ease-in-out, color .3s ease-in-out;
+                        -webkit-transition: width .3s ease-in-out, color .3s ease-in-out;
+                        -moz-transition: width .3s ease-in-out, color .3s ease-in-out;
+                        -o-transition: width .3s ease-in-out, color .3s ease-in-out;
+                        &:hover {
+                              color: $yellow;
+                        }
+                        &::after {
+                              content: '';
+                              position: absolute;
+                              left: 50%;
+                              bottom: -5px;
+                              width: 0;
+                              height: 1px;
+                              background: $yellow;
+                        }
+                        &:hover::after {
+                              width: 100%;
+                              left: 0;
+                              @include transition(all .3s ease-in-out);
+                        }
+                  }
+            }
+      }
+}
+// NAVIGATION END
+
+// HOME PAGE STYLE START
+header#home {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-image: url(../img/header-image.jpg);
+      background-position: top;
+      @include background-size-cover;
+      .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            @include transform(translate(-50%, -50%));
+            font-family: $font-EB;
+            color: $white;
+            text-align: center;
+            padding: 50px 0;
+            .text {
+                  position: relative;
+                  padding: 50px 5%;
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              top: 0;
+                              right: 0;
+                              height: 100%;
+                              width: 54%;
+                              border: 20px solid $yellow;
+                              opacity: .78;
+                              border-radius: 3px;
+                              @include box-sizing(border-box);
+                        }
+                  h1 {
+                        font-size: 6em;
+                        padding: 0;
+                        margin: 0;
+                        position: relative;
+                        z-index: 2;
+                  }
+                  span {
+                        letter-spacing: 5px;
+                        margin: 0;
+                        position: inherit;
+                        z-index: 2;
+                  }
+            }
+      }
+      #lang {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            font-size: 0.9em;
+            color: $white;
+            a {
+                  color: $white;
+                  display: inline-block;
+                  opacity: .6;
+                  text-decoration: none;
+                  &.active {
+                        opacity: 1;
+                  }
+            }
+      }
+}
+
+// SECTION ABOUT STYLES
+#about {
+      padding: 13% 17%;
+      .content {
+            height: 100%;
+            width: 100%;
+            .text {
+                  margin-top: 12%;
+                  span {
+                        color: $yellow;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                        display: block;
+                        margin-bottom: 10px;
+                  }
+                  p {
+                        &:last-child {
+                              margin-bottom: 0;
+
+                        }
+                        a {
+                              color: inherit; 
+                              font-weight: 600;
+                        }
+                  }
+            }
+      }
+}
+
+// SECTION PORTFOLIO STYLES
+
+#work {
+      .header-container {
+            padding: 13% 6%;
+            background-image: url(../img/about.jpg);
+            background-position: center;
+            background-size: cover;
+            @include flexbox-display-flex;
+            @include justify-content-flex(space-between);
+            @include align-item-flex(center);
+            header {
+                  h2 {
+                        color: $white;
+                  }
+            }
+            .row {
+                  padding: 4%;
+                  @include box-sizing(border-box);
+                  @include flexbox-display-flex;
+                  @include flex-wrap;
+                  background-color: #8f877eb3;
+                  color: $white;
+                  width: 55%;
+                  min-width: 485px;
+                  .items {
+                        height: 50%;
+                        width: 50%;
+                        padding: 10px;
+                        @include box-sizing(border-box);
+                        min-width: 240px;
+                        img {
+                              height: 35px;
+                        }
+                        h4 {
+                              margin: 10px 0 5px 0;
+                        }
+                        p {
+                              margin: 10px 0  0 0;
+                              line-height: 20px;
+                        }
+                  }
+            }
+      }
+      h3 {
+            margin-top: 10%;
+            margin-bottom: 5%;
+            font-size: 2em;
+            font-weight: 700;
+            margin-left: 10%;
+      }
+      ul {
+            padding: 0 10%;
+            @include flexbox-display-flex;
+            @include justify-content-flex(space-between);
+            @include flex-wrap;
+            margin-bottom: 13%;
+            li {
+                  list-style-type: none;
+                  width: 49%;
+                  padding: 40px;
+                  @include box-sizing(border-box);
+                  position: relative;
+                  background: #E0DEDB;
+                  border-radius: 3px;
+                  margin-bottom: 2%;
+                  @include flexbox-display-flex;
+                  @include justify-content-flex(start);
+                  @include align-item-flex(center);
+                  &:hover .hover-bgc {
+                        visibility: visible;
+                        opacity: 1;
+                  }
+                  &:hover .hover-bgc .btn {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 50%;
+                  }
+                  .icon {
+                        margin-right: 20px;
+                        @include flexbox-display-flex;
+                        @include align-item-flex(center);
+                        img {
+                              height: 80px;
+                              display: inline-block;
+                        }
+                  }
+                  .content {
+                        h4 {
+                              margin-bottom: 10px;
+                        }
+                        p {
+                              margin: 0;
+                        }
+                  }
+                  .hover-bgc {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: $brown-opacity;
+                        height: 100%;
+                        width: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        @include transition(opacity .3s ease-in-out);
+                        .btn {
+                              position: absolute;
+                              top: 58%;
+                              left: 50%;
+                              @include transform(translate(-50%, -50%));
+                              visibility: hidden;
+                              opacity: 0 ;
+                              @include transitionCubic(all, 0.5s, cubic-bezier(0.65,-0.25,0.25,1.95));
+                              margin: 0;
+                        }
+                  }
+            }
+      }
+}
+
+// SECTION CONTACT STYLES
+#contact {
+      @include flexbox-display-flex;
+      min-height: 100vh;
+      .image {
+            background-image: url(../img/contact.jpg);
+            background-position: left;
+            background-size: cover;
+            width: 50%;
+            @include flexbox-display-flex;
+            @include flex-direction(column);
+            @include align-item-flex(start);
+            @include justify-content-flex(center);
+            @include box-sizing(border-box);
+            padding-left: 10%;
+
+            header {
+                  color: $white;
+                  margin-bottom: 20%
+            }
+            address {
+                  color: $white;
+                  h3 {
+                        font-size: 1.5em;
+                  }
+                  div {
+                        @include flexbox-display-flex;
+                        margin: 5px;
+                        img {
+                              height: 20px;;
+                              margin-right: 15px;
+                        }
+                        p {
+                              margin: 0;
+                        }
+                  }
+            }
+      }
+      .date {
+            width: 50%;
+            padding: 8%;
+            @include box-sizing(border-box);
+            margin: auto;
+            form {
+                  h3 {
+                        margin-bottom: 10%;
+                  }
+                  .col-3 {
+                        position: relative;
+                        margin: 30px 0;
+                        input {
+                              outline: none;
+                              width: 100%;
+                              height: 40px;
+                              padding: 10px;
+                              @include box-sizing(border-box);
+                              background: none;
+                              border: none;
+                              border-bottom: 1px solid $black;
+                              font-family: inherit;
+                        } 
+                        &:nth-child(5) > input {
+                              height: 100px;
+                        }
+                        span {
+                              font-family: inherit;
+                        }
+                  }
+                  .btn {
+                        padding: 10px 120px;
+                        margin-top: 10%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                  }
+            }
+      }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+ {
+  -webkit-text-fill-color: $black;
+  @include transition(background-color 5000s ease-in-out 0s);
+}
+
+// effect input focus styles
+.effect ~ .focus-border { 
+      position: absolute; 
+      bottom: 0; 
+      left: 0; 
+      width: 0; 
+      height: 2px; 
+      background-color: $yellow; 
+      @include transition( all .4s ease-in-out); 
+}
+.effect:focus ~ .focus-border,
+.has-content.effect ~ .focus-border {
+      width: 100%; 
+      @include transition( all .4s ease-in-out); 
+}
+.effect ~ label {
+      position: absolute; 
+      left: 0; 
+      width: 100%; 
+      top: -8px; 
+      color: $black; 
+      transition: 0.3s; 
+      z-index: -1; 
+      font-size: 12px;
+      letter-spacing: 0.5px;
+}
+.effect:focus ~ label, .has-content.effect ~ label {
+      top: -13px; 
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 14px;
+      @include transition(0.3s);
+}
+
+
+// ANIMATION
+@keyframes fadeIn {
+      0% {
+            transform: translateY(25px); 
+            -webkit-transform: translateY(25px); 
+            -moz-transform: translateY(25px); 
+            -ms-transform: translateY(25px); opacity: 0;
+      }
+      100% {
+            transform: translateY(0px); 
+            -webkit-transform: translateY(0px); 
+            -moz-transform: translateY(0px); 
+            -ms-transform: translateY(0px); 
+            opacity: 1;
+      }
+}
