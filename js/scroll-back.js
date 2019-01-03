@@ -7,8 +7,8 @@ $(function() {
             'background': 'rgba(143, 135, 126, 0.432)',
             'padding': '10px',
             'position': 'fixed',
-            'right': '5%',
-            'bottom': '5%',
+            'right': '30px',
+            'bottom': '20px',
             'border-radius': '3px',
             'display': 'none'
       });
@@ -28,6 +28,6 @@ $(function() {
       });
 
       $button.on('click', function() {
-            $("html, body").animate({ scrollTop: 0 }, 1000);
+            $("html, body").animate({ scrollTop: 0 }, 600);
       })
 });
