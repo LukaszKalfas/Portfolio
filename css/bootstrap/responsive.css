@@ -1,0 +1,47 @@
+@media (min-width: 576px) { 
+      #main-header .header-caption h1 {
+            font-size:  3rem;
+      }
+      #main-header .header-caption h2 {
+            font-size: 1.1rem;
+      }
+      #contact button { 
+            width: 80%;
+      }
+ }
+@media (min-width: 768px) { 
+      #main-header .header-caption h1 {
+            font-size:  4rem;
+      }
+      #main-header .header-caption h2 {
+            letter-spacing: 6px;
+            font-size: 1.2rem;
+      }
+      #contact button { 
+            width: 70%;
+      }
+ }
+@media (min-width: 992px) { 
+      #main-header .header-caption h1 {
+            font-size:  5rem;
+      }
+      #main-header .header-caption h2 {
+            letter-spacing: 10px;
+            font-size: 1.3rem;
+      }
+            #contact button { 
+            width: 50%;
+      }
+}
+      @media (min-width: 1200px) {
+      #main-header .header-caption h1 {
+            font-size:  6rem;
+      }
+      #main-header .header-caption h2 {
+            letter-spacing: 14px;
+            font-size: 1.4rem;
+      }
+      #contact button { 
+            width: 40%;
+      }
+ }

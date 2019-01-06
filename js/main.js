@@ -20,7 +20,7 @@ $(document).ready(function () {
             $('nav').removeClass('open');
       });
 
-      $('.scroll-to-contact a').bind('click', function(e) {
+      $('.scroll-to-contact').bind('click', function(e) {
             e.preventDefault();
             var target = $(this).attr("href");
             $('html, body').stop().animate({
