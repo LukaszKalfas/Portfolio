@@ -150,12 +150,10 @@ nav {
       position: absolute;
       height: 50px;
       z-index: 1;
-      @include transition(height .3s ease-in-out);
+      @include transition(top .4s ease-in-out);
             &.open {
                   visibility: visible;
                   top: 0;
-                  height: 100vh;
-                  max-height: 450px;
             ul {
                   li {
                         opacity: 0;
