@@ -7,7 +7,7 @@ $(function() {
             'background': 'rgba(143, 135, 126, 0.432)',
             'padding': '10px',
             'position': 'fixed',
-            'right': '30px',
+            'right': '10px',
             'bottom': '20px',
             'border-radius': '3px',
             'display': 'none'
@@ -16,7 +16,7 @@ $(function() {
             'color': '#f3f3f3',
             'font-size': '20px'
       })
-   $button.prepend($arrow);   
+   $button.prepend($arrow);
    $button.appendTo('body');
 
       $(window).scroll(function () {
