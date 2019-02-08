@@ -43,9 +43,9 @@ nav.navbar {
     width: 100%;
     z-index: -1;
     top: 0;
-    background-image:-moz-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/header/apple-devices-artificial-flowers-business-196658.jpg);
-    background-image: -webkit-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/header/apple-devices-artificial-flowers-business-196658.jpg);
-    background-image: linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/header/apple-devices-artificial-flowers-business-196658.jpg);
+    background-image:-moz-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/header/apple-devices-artificial-flowers-business-196658.jpg);
+    background-image: -webkit-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/header/apple-devices-artificial-flowers-business-196658.jpg);
+    background-image: linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/header/apple-devices-artificial-flowers-business-196658.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,27 +152,27 @@ section .section-title {
 }
 
 #portfolio .photo1 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/box_of_cookies.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/box_of_cookies.jpg);
 }
 
 #portfolio .photo2 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/chaotic_paint.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/chaotic_paint.jpg);
 }
 
 #portfolio .photo3 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/chestnut_on_bracket.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/chestnut_on_bracket.jpg);
 }
 
 #portfolio .photo4 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/child_with_blue_paint.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/child_with_blue_paint.jpg);
 }
 
 #portfolio .photo5 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/house_with_blue_doors.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/house_with_blue_doors.jpg);
 }
 
 #portfolio .photo6 {
-    background-image: url(../../img/projects/p-bootstrap/portfolio/typing_on_laptop.jpg);
+    background-image: url(../../img/projects/p-bootrap/portfolio/typing_on_laptop.jpg);
 }
 
 #portfolio .portfolio-image-mask {
@@ -260,9 +260,9 @@ section .section-title {
 
 /* SECTION CONTACT STYLE */
 #contact {
-    background-image: -moz-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/contact/world-map.jpg);
-    background-image: -webkit-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/contact/world-map.jpg);
-    background-image: linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootstrap/contact/world-map.jpg);
+    background-image: -moz-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/footer/world-map.jpg);
+    background-image: -webkit-linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/footer/world-map.jpg);
+    background-image: linear-gradient(150deg, rgba(64,61,57,0.8) 0%,rgba(64,61,57,0.7) 60%,rgba(235,94,40,0.2) 85%,rgba(235,94,40,0.5) 100%), url(../../img/projects/p-bootrap/footer/world-map.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

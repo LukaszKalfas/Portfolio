@@ -30,20 +30,22 @@
       <!-- GOOGLE FONTS -->
       <link href="https://fonts.googleapis.com/css?family=Asap:600,700|Comfortaa" rel="stylesheet">
 
-      <!-- general styles -->
+      <!-- PRELOADER STYLES -->
+      <link rel="stylesheet" href="css/loader.css">
+      <!-- GENERAL STYLE -->
       <link rel="stylesheet" href="css/style.css">
-
-      <!-- projects styles -->
+      <!-- PROJECTS STYLE -->
       <link rel="stylesheet" href="css/portfolio-styles.css">
-
-      <!-- general responsive -->
+      <!-- GENERAL RESPONSIVE -->
       <link rel="stylesheet" href="css/responisve.css">
-
-      <!-- projects responsive styles -->
+      <!-- PROJECTS RESPONSIVE -->
       <link rel="stylesheet" href="css/portfolio-responisve.css">
 </head>
 
 <body>
+      <div id="loader-wrapper">
+            <div class="nb-spinner"></div>
+      </div>
       <div class="container-menu">
             <div class="menu">
                   <div class="bar"></div>
@@ -67,7 +69,7 @@
       </header>
       <main class="projects">
             <div class="header-img pomodoro">
-                  <a  id="modal-open">
+                  <a id="modal-open">
                         <img src="img/projects/iconmonstr-fullscreen-7-240.png" alt="fullscreen">
                         Fullscreen
                   </a>
@@ -108,7 +110,8 @@
       <footer>
             <p>copyright &copy Łukasz Kalfas 2019</p>
       </footer>
-      <script src="js/jquery-3.3.1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+      <script src="js/preloader.js"></script>
       <script src="js/main.js"></script>
       <script src="js/modal-init.js"></script>
       <script src="js/modal-window.js"></script>
